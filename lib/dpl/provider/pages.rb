@@ -180,7 +180,7 @@ module DPL
 
       def github_deploy
         print_step "Doing the git push (workdir: #{Dir.pwd})..."
-        unless context.shell "git push#{@git_push_opts} --quiet '#{@gh_remote_url}' '#{@target_branch}':'#{@target_branch}' > /dev/null 2>&1"
+        unless context.shell "git push#{@git_push_opts} --quiet '#{@gh_remote_url}' '#{@target_branch}':'#{@target_branch}'"
           error "Couldn't push the build to #{@gh_ref}:#{@target_branch}"
         end
       end
