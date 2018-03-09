@@ -27,6 +27,8 @@ def gemspec_for(provider_name=nil, runtime_dependencies=[])
       s.add_runtime_dependency *part
     end
 
+    s.add_runtime_dependency 'term-ansicolor'
+
     s.add_development_dependency 'rspec'
     s.add_development_dependency 'rspec-its'
     s.add_development_dependency 'rake'
